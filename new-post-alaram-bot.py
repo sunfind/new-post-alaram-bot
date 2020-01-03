@@ -32,7 +32,7 @@ def ppomppu():
     soup = BeautifulSoup(html, 'html.parser') #, from_encoding='utf-8')
     posts = soup.find("tr", {"class" : "list1"})
     post_num = posts.find("td", {"class" : "eng list_vspace"}).text
-  post_num.strip()
+    post_num.strip()
 
     # 스케쥴러가 10분 마다 제일 최신 게시글 번호와 크롤링한 최신 게시글 번호 비교
     # 비교 후 같지 않으면 최신 게시글 업데이트 된 것으로 텔레그램 봇으로 업데이트 메시지 전송
@@ -46,7 +46,7 @@ def ppomppu():
         bot.sendMessage(-265645381, text)
         # 프롬프트 로그
         print(text)
-     print(os.environ)
+        print(os.environ)
 
     print('bot 동작 중...현재 게시글 번호 ' + ppompu_latest_num.strip())
     print('heroku PPOMPU_ID 환경변수' + os.environ.get('PPOMPU_ID'))
