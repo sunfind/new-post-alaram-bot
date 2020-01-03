@@ -1,1 +1,1 @@
-worker: python telegram_bot.py
+worker: python new-post-alaram-bot.py
